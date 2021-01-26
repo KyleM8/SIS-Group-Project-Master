@@ -21,18 +21,22 @@ public class Main {
 	public static void selectOption()
 	{
 		System.out.println("What would you like to do?");
-		System.out.println("1. add or delete a student \n2. change student grades/schedule \n3. sort students");
+		System.out.println("1. Add or delete a student \n2. Change student grades or schedule \n3. Sort students");
 		//takes user input and runs appropriate method
 		Scanner userIn = new Scanner(System.in);
 		int userChoice = userIn.nextInt();
-		if(userChoice == 1)
+		if (userChoice == 1) {
 			StudentAdditionOrDeletion.addOrDeleteStudent();
-		else if(userChoice == 2)
+		}
+		else if (userChoice == 2) {
 			GradeOrScheduleChanger.changeGradesOrSchedule();
-		else if(userChoice == 3)
+		}
+		else if (userChoice == 3) {
 			StudentSorting.sortStudents();
-		else
+		}
+		else {
 			selectOption();
+		}
 	}
 	
 	

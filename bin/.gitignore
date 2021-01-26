@@ -1,6 +1,8 @@
-/Main.class
-/SISInput.txt
-/Student.class
-/StudentSorting.class
+/.classpath
+/.project
+/.settings/
 /GradeOrScheduleChanger.class
+/README.md
 /StudentAdditionOrDeletion.class
+/StudentSorting.class
+/InputHelper.class
