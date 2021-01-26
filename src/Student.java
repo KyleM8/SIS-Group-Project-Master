@@ -6,12 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import java.util.HashMap;
-<<<<<<< Updated upstream
 import java.util.ArrayList;
-
-=======
 import java.util.Map;
->>>>>>> Stashed changes
 
 public class Student {
 	// Student object variables
