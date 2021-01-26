@@ -16,7 +16,6 @@ public class Student {
 	protected ArrayList<String> subjects = new ArrayList<String>();	
 	
 	// reads data from file and creates new Student objects, adding them to the arraylist declared in the Main class
-	// NOTE: for some reason, it's currently reading the data backwards
 	public static void getStudentData() {
 		try {
 			String uri = "src/SISInput.txt";
