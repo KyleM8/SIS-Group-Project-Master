@@ -26,24 +26,15 @@ public class Main {
 		Scanner userIn = new Scanner(System.in);
 		int userChoice = userIn.nextInt();
 		if(userChoice == 1)
-			addOrDeleteStudent();
+			StudentAdditionOrDeletion.addOrDeleteStudent();
 		else if(userChoice == 2)
-			changeGradesOrSchedule();
+			GradeOrScheduleChanger.changeGradesOrSchedule();
 		else if(userChoice == 3)
-			sortStudents();
+			StudentSorting.sortStudents();
 		else
 			selectOption();
 	}
-	public static void addOrDeleteStudent()
-	{
-		
-	}
-	public static void changeGradesOrSchedule()
-	{
-		
-	}
-	public static void sortStudents()
-	{
-		
-	}
+	
+	
+	
 }
