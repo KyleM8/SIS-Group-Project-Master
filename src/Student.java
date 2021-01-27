@@ -69,15 +69,6 @@ public class Student {
 	public void addStudent(Student s) {
 		Main.students.add(s);
 	}
-	public void removeStudent(int i) {
-		Main.students.remove(i);
-	}
-	public void removeStudent(Student s) {
-		Main.students.remove(s);
-	}
-	public ArrayList<Student> getStudentList() {
-		return Main.students;
-	}
 	public ArrayList<String> getSubjectList() {
 		return subjects;
 	}
