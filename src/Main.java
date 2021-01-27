@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//liz test comment
 public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 
