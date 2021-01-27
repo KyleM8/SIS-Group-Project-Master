@@ -3,6 +3,25 @@ import java.util.ArrayList;
 
 public class InputHelper {
 	
+	public static void printAllStudentsAndInfo() {
+		System.out.println("ALL STUDENTS:\n");
+		String spacing = "   ";
+		for (Student s : Main.students) {
+			System.out.println("\nName: " + s.getName());
+			System.out.print(spacing + "Classes and grades: ");
+			int counter = 1;
+			for (String str : s.getSubjectList()) {
+				System.out.print(str + ", "+ s.getGrades().get(str));
+				if (counter <= 2) {
+					System.out.print("; ");
+				}
+				counter++;
+			}
+			System.out.println("");
+		}
+		System.out.println("\n\n\n");
+	}
+	
 	public static boolean checkInput(String str) { //given a string, asks the user if it is the correct input, and returns a boolean based on the user's response
 		System.out.println("Is this the correct input? Type y for yes, or n for no.");
 		System.out.println(str);
