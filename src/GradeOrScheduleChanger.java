@@ -38,13 +38,18 @@ public class GradeOrScheduleChanger
 			gradeValue = "";
 		else
 			gradeValue = newGrade.substring(1);
-		//create new HashMap here
-		//perhaps there's a way to modify the original at the correct index
-		Map<String,String> tempGrades = new HashMap<String,String>(); 
-		tempGrades.put(gradeLetter, gradeValue);
-		Main.students.get(studentIndex - 1).setGrades(tempGrades);
+		//create new temporary HashMap here
+		Map<String,String> tempGrades = new HashMap<String,String>();
+		//update it to the current value
+		tempGrades = Main.students.get(studentIndex - 1).getGrades();
+		//get the key
+		String subjectToBeChanged = Main.students.get(studentIndex - 1).getSubjectList().get(selectedClassIndex - 1);
+		//replace according to the key
+		tempGrades.replace(subjectToBeChanged, newGrade);
+		System.out.println(Main.students.get(studentIndex - 1).getGrades());
+		//print all info to show change
 		InputHelper.printAllStudentsAndInfo();
-		//problem: returns null
+		System.out.println("Grades have been updated.");
 	}
 	public static void switchClasses()
 	{
