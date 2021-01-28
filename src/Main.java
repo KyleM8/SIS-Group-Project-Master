@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+<<<<<<< Updated upstream
 //liz test commit after lunch meeting
 //kyle test commit to test fetching capability
 
+=======
+>>>>>>> Stashed changes
 public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 
