@@ -6,8 +6,9 @@ public class InputHelper {
 	public static void printAllStudentsAndInfo() {
 		System.out.println("ALL STUDENTS:\n");
 		String spacing = "   ";
+		int index = 1;
 		for (Student s : Main.students) {
-			System.out.println("\nName: " + s.getName());
+			System.out.println("\n" + index + ". " + s.getName());
 			System.out.print(spacing + "Classes and grades: ");
 			int counter = 1;
 			for (String str : s.getSubjectList()) {
@@ -18,6 +19,7 @@ public class InputHelper {
 				counter++;
 			}
 			System.out.println("");
+			index++;
 		}
 		System.out.println("\n\n\n");
 	}
