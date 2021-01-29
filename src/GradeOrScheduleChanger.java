@@ -45,6 +45,7 @@ public class GradeOrScheduleChanger
 		//print all info to show change
 		InputHelper.printAllStudentsAndInfo();
 		System.out.println("Grades have been updated.");
+		Main.selectOption();
 	}
 	public static void switchClasses()
 	{
@@ -62,6 +63,7 @@ public class GradeOrScheduleChanger
 		String newClass = newClassIn.nextLine();
 		//replace the class
 		Main.students.get(studentIndex - 1).getSubjectList().set(selectedClassIndex - 1, newClass);
+		
 		//update the grades
 		//determine new grade
 		System.out.println("What would you like the new grade to be?");
@@ -72,11 +74,20 @@ public class GradeOrScheduleChanger
 				//update it to the current value
 				tempGrades = Main.students.get(studentIndex - 1).getGrades();
 				//replace according to the key
-				tempGrades.replace(newClass, newGrade);
-				Main.students.get(studentIndex - 1).setGrades(tempGrades);
-				System.out.println(Main.students.get(studentIndex - 1).getGrades());
+				String subjectToBeChanged = Main.students.get(studentIndex - 1).getSubjectList().get(selectedClassIndex - 1);
+				tempGrades.remove(subjectToBeChanged);
+				
+				tempGrades.put(newClass, newGrade);
+				//tempGrades.replace(newClass, newGrade);
+				Main.students.get(studentIndex - 1).setGrades(tempGrades); 
+				//I think if I remove the previous subject form the array list it will work
+				//It also needs to be set to the correct index
 				
 		//print out new info
 		InputHelper.printAllStudentsAndInfo();
+//		System.out.println(Main.students.get(studentIndex - 1).getName());
+//		System.out.println(Main.students.get(studentIndex - 1).getGrades());
+//		System.out.println(Main.students.get(studentIndex - 1).getSubjectList());
+		Main.selectOption();
 	}
 }
