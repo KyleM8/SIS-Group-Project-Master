@@ -40,7 +40,8 @@ public class StudentAdditionOrDeletion {
 						tempSubjects.add(gradesArr[i]);
 						tempGrades.put(gradesArr[i], gradesArr[i+1]);
 					}
-					Main.students.add(new Student(name, tempGrades, tempSubjects));
+					float gpaTemp = InputHelper.calcGPA(tempGrades.get(tempSubjects.get(0)), tempGrades.get(tempSubjects.get(1)), tempGrades.get(tempSubjects.get(2)));
+					Main.students.add(new Student(name, tempGrades, tempSubjects, gpaTemp));
 					System.out.println("Student named " + name + " with grade input \"" + gradesStr + "\" has been added.");
 					System.out.println("Returning to main menu.");
 					Main.selectOption();
