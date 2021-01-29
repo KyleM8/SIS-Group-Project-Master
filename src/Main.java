@@ -5,6 +5,7 @@ public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 
 	public static void main(String[] args) {
+		InputHelper.setGradeScale();
 		Student.getStudentData(); //calls the getStudentData() method, which reads all the data from the file and writes Student objects to the students ArrayList above
 		InputHelper.printAllStudentsAndInfo();
 		selectOption();
@@ -25,7 +26,7 @@ public class Main {
 			GradeOrScheduleChanger.changeGradesOrSchedule();
 		}
 		else if (userChoice == 3) {
-			StudentSorting.sortStudents();
+			StudentSorting.sortStudentsMain();
 		}
 		else if (userChoice == 4) {
 			InputHelper.printAllStudentsAndInfo();
@@ -34,7 +35,5 @@ public class Main {
 			selectOption();
 		}
 	}
-	
-	
 	
 }

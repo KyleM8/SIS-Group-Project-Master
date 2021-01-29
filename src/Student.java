@@ -13,7 +13,9 @@ public class Student {
 	// Student object variables
 	protected String name;
 	protected Map<String,String> grades = new HashMap<String,String>();
-	protected ArrayList<String> subjects = new ArrayList<String>();	
+	protected ArrayList<String> subjects = new ArrayList<String>();
+	protected float gpa = 0f;
+	
 	
 	// reads data from file and creates new Student objects, adding them to the arraylist declared in the Main class
 	public static void getStudentData() {
@@ -30,7 +32,8 @@ public class Student {
 					tempGrades.put(lineArr[i], lineArr[i+1]);
 					tempSubjects.add(lineArr[i]);
 				}
-				Student studentTemp = new Student(tempName, tempGrades, tempSubjects);
+				float gpaTemp = InputHelper.calcGPA(tempGrades.get(tempSubjects.get(0)), tempGrades.get(tempSubjects.get(1)), tempGrades.get(tempSubjects.get(2)));
+				Student studentTemp = new Student(tempName, tempGrades, tempSubjects, gpaTemp);
 				Main.students.add(studentTemp);
 			}
 			bufferedReader.close();
@@ -51,6 +54,12 @@ public class Student {
 		this.name = n;
 		this.grades = g;
 		this.subjects = s;
+	}
+	Student(String n, Map<String,String> g, ArrayList<String> s, float f) {
+		this.name = n;
+		this.grades = g;
+		this.subjects = s;
+		this.gpa = f;
 	}
 	
 	// getters and setters / helper methods
@@ -74,6 +83,12 @@ public class Student {
 	}
 	public void setSubjectList(ArrayList<String> s) {
 		this.subjects = s;
+	}
+	public float getGPA() {
+		return gpa;
+	}
+	public void setGPA(float f) {
+		this.gpa = f;
 	}
 	
 }
