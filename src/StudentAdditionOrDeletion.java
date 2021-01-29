@@ -11,12 +11,11 @@ public class StudentAdditionOrDeletion {
 		System.out.println("1. Add student\n2. Delete student\n3. Return to main menu");
 		Scanner scanner = new Scanner(System.in);
 		String choiceStr = scanner.nextLine();
-		scanner.close();
 		if (InputHelper.isNumber(choiceStr)) {
 			int choice = Integer.parseInt(choiceStr);
 			if (choice == 1) { addStudent(); }
 			else if (choice == 2) { deleteStudent(); }
-			else if (choice == 3) { Main.selectOption(); }
+			else if (choice == 3) { Main.selectOption();}
 			else { addOrDeleteStudent(); }
 		}
 		else { addOrDeleteStudent(); }
@@ -26,14 +25,12 @@ public class StudentAdditionOrDeletion {
 		System.out.println("\nYou are now adding a new student.\nWhat is the student's name?");
 		Scanner nameScanner = new Scanner(System.in);
 		String name = nameScanner.nextLine();
-		nameScanner.close();
 		if (InputHelper.checkInput(name)) {
 			System.out.println("The student's name is: " + name);
 			System.out.println("Now, input the student's subjects and grades in the format: Subject, Grade, Subject, Grade, Subject, Grade.");
 			System.out.println("Separate each element using a comma followed by a space. Do not use any punctuation other than commas and spaces.");
 			Scanner gradesScanner = new Scanner(System.in);
 			String gradesStr = gradesScanner.nextLine();
-			gradesScanner.close();
 			if (InputHelper.checkInput(gradesStr)) {
 				String [] gradesArr = gradesStr.split(", ");
 				ArrayList<String> tempSubjects = new ArrayList<String>();
@@ -44,6 +41,9 @@ public class StudentAdditionOrDeletion {
 						tempGrades.put(gradesArr[i], gradesArr[i+1]);
 					}
 					Main.students.add(new Student(name, tempGrades, tempSubjects));
+					System.out.println("Student named " + name + " with grade input \"" + gradesStr + "\" has been added.");
+					System.out.println("Returning to main menu.");
+					Main.selectOption();
 				}
 				catch (ArrayIndexOutOfBoundsException e) {
 					System.out.println("Sorry, it appears that you made a mistake in your input.\nReturning to top menu.");
@@ -60,16 +60,17 @@ public class StudentAdditionOrDeletion {
 		Scanner nameScanner = new Scanner(System.in);
 		String name = nameScanner.nextLine();
 		int ind = InputHelper.getIndexOfStudent(name);
-		nameScanner.close();
 		if (ind == -1) {
 			System.out.println("This student does not exist. Returning to the main menu.");
 			Main.selectOption();
 		}
 		else {
 			if (InputHelper.checkInput(name)) {
-				System.out.println("Deleting student...");
+				System.out.print("Deleting student...");
 				Main.students.remove(ind);
 				System.out.print("deleted.\n");
+				System.out.println("Returning to main menu.\n");
+				Main.selectOption();
 			}
 			else { addOrDeleteStudent(); }
 		}

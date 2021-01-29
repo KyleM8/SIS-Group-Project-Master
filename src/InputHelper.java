@@ -5,10 +5,15 @@ public class InputHelper {
 	
 	public static void printAllStudentsAndInfo() {
 		System.out.println("ALL STUDENTS:\n");
-		String spacing = "   ";
+		String spacing = "    ";
 		int index = 1;
 		for (Student s : Main.students) {
-			System.out.println("\n" + index + ". " + s.getName());
+			if (index < 10) {
+				System.out.println("\n0" + index + ". " + s.getName());
+			}
+			else {
+				System.out.println("\n" + index + ". " + s.getName());
+			}
 			System.out.print(spacing + "Classes and grades: ");
 			int counter = 1;
 			for (String str : s.getSubjectList()) {
