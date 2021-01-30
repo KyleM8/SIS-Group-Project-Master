@@ -1,8 +1,10 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
-public class SortPeriod {
-	
-<<<<<<< Updated upstream
-=======
+//liz section
+public class SortPeriod 
+{
 	public static void sortByPeriod()
 	{
 		//gather info
@@ -24,12 +26,11 @@ public class SortPeriod {
 		else if(periodChoice == 3)
 		{
 			Collections.sort(Main.students, new PeriodThreeComparator());
-			InputHelper.printAllStudentsAndInfo(Main.students);	
+      InputHelper.printAllStudentsAndInfo(Main.students);	
 		}
 		else
 		{
 			sortByPeriod();
 		}
 	}
->>>>>>> Stashed changes
 }
