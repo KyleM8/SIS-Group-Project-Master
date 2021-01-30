@@ -35,11 +35,11 @@ public class InputHelper {
 		return gpa;
 	}
 	
-	public static void printAllStudentsAndInfo() {
+	public static void printAllStudentsAndInfo(ArrayList<Student> list) {
 		System.out.println("ALL STUDENTS:\n");
 		String spacing = "    ";
 		int index = 1;
-		for (Student s : Main.students) {
+		for (Student s : list) {
 			if (index < 10) {
 				System.out.println("\n0" + index + ". " + s.getName());
 			}

@@ -22,7 +22,7 @@ public class GradeOrScheduleChanger
 	public static void changeGrades()
 	{
 		//gather all info needed in order to set grades
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(Main.students);
 		System.out.println("Enter the index of the student whose grades you would like to change.");
 		Scanner userStudentIn = new Scanner(System.in);
 		int studentIndex = userStudentIn.nextInt();
@@ -48,11 +48,54 @@ public class GradeOrScheduleChanger
 		tempGrades.replace(subjectToBeChanged, newGrade);
 		System.out.println(Main.students.get(studentIndex - 1).getGrades());
 		//print all info to show change
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(Main.students);
 		System.out.println("Grades have been updated.");
 	}
 	public static void switchClasses()
 	{
+<<<<<<< Updated upstream
 		
+=======
+		//print out current students
+		InputHelper.printAllStudentsAndInfo(Main.students);
+		//gather needed info
+		System.out.println("Enter the index of the student whose schedule you would like to change.");
+		Scanner userStudentIn = new Scanner(System.in);
+		int studentIndex = userStudentIn.nextInt();
+		System.out.println("Which period would you like to change?");
+		Scanner selectedClassIn = new Scanner(System.in);
+		int selectedClassIndex = selectedClassIn.nextInt();
+		System.out.println("What class would you like to transfer the student to?");
+		Scanner newClassIn = new Scanner(System.in);
+		String newClass = newClassIn.nextLine();
+		//replace the class
+		Main.students.get(studentIndex - 1).getSubjectList().set(selectedClassIndex - 1, newClass);
+		
+		//update the grades
+		//determine new grade
+		System.out.println("What would you like the new grade to be?");
+		Scanner newGradeIn = new Scanner(System.in);
+		String newGrade = newGradeIn.nextLine();
+		//create new temporary HashMap here
+				Map<String,String> tempGrades = new HashMap<String,String>();
+				//update it to the current value
+				tempGrades = Main.students.get(studentIndex - 1).getGrades();
+				//replace according to the key
+				String subjectToBeChanged = Main.students.get(studentIndex - 1).getSubjectList().get(selectedClassIndex - 1);
+				tempGrades.remove(subjectToBeChanged);
+				
+				tempGrades.put(newClass, newGrade);
+				//tempGrades.replace(newClass, newGrade);
+				Main.students.get(studentIndex - 1).setGrades(tempGrades); 
+				//I think if I remove the previous subject form the array list it will work
+				//It also needs to be set to the correct index
+				
+		//print out new info
+		InputHelper.printAllStudentsAndInfo(Main.students);
+//		System.out.println(Main.students.get(studentIndex - 1).getName());
+//		System.out.println(Main.students.get(studentIndex - 1).getGrades());
+//		System.out.println(Main.students.get(studentIndex - 1).getSubjectList());
+		Main.selectOption();
+>>>>>>> Stashed changes
 	}
 }
