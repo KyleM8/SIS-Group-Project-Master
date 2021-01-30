@@ -26,11 +26,7 @@ public class SortPeriod
 		else if(periodChoice == 3)
 		{
 			Collections.sort(Main.students, new PeriodThreeComparator());
-<<<<<<< Updated upstream
-      InputHelper.printAllStudentsAndInfo(Main.students);	
-=======
 			InputHelper.printAllStudentsAndInfo(Main.students);	
->>>>>>> Stashed changes
 		}
 		else
 		{
