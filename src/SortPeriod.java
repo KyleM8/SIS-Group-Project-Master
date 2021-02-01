@@ -5,7 +5,6 @@ import java.util.Scanner;
 //liz section
 public class SortPeriod 
 {
-	
 	public static void sortByPeriod()
 	{
 		//gather info
@@ -17,17 +16,17 @@ public class SortPeriod
 		if(periodChoice == 1)
 		{
 			Collections.sort(Main.students, new PeriodOneComparator());
-			InputHelper.printAllStudentsAndInfo();	
+			InputHelper.printAllStudentsAndInfo(Main.students);	
 		}
 		else if(periodChoice == 2)
 		{
 			Collections.sort(Main.students, new PeriodTwoComparator());
-			InputHelper.printAllStudentsAndInfo();
+			InputHelper.printAllStudentsAndInfo(Main.students);	
 		}
 		else if(periodChoice == 3)
 		{
 			Collections.sort(Main.students, new PeriodThreeComparator());
-			InputHelper.printAllStudentsAndInfo();
+			InputHelper.printAllStudentsAndInfo(Main.students);	
 		}
 		else
 		{

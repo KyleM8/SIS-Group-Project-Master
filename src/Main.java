@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-//liz daily pull request comment
 public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 
 	public static void main(String[] args) {
 		InputHelper.setGradeScale();
 		Student.getStudentData(); //calls the getStudentData() method, which reads all the data from the file and writes Student objects to the students ArrayList above
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(students);
 		selectOption();
 	}
 	
@@ -29,8 +28,8 @@ public class Main {
 			StudentSorting.sortStudentsMain();
 		}
 		else if (userChoice == 4) {
-			InputHelper.printAllStudentsAndInfo();
-			selectOption();
+		InputHelper.printAllStudentsAndInfo(students);
+		selectOption();
 		}
 		else {
 			selectOption();

@@ -24,7 +24,7 @@ public class GradeOrScheduleChanger
 	public static void changeGrades()
 	{
 		//gather all info needed in order to set grades
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(Main.students);
 		System.out.println("Enter the index of the student whose grades you would like to change.");
 		Scanner userStudentIn = new Scanner(System.in);
 		int studentIndex = userStudentIn.nextInt();
@@ -43,14 +43,14 @@ public class GradeOrScheduleChanger
 		//replace according to the key
 		tempGrades.replace(subjectToBeChanged, newGrade);
 		//print all info to show change
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(Main.students);
 		System.out.println("Grades have been updated.");
 		Main.selectOption();
 	}
 	public static void switchClasses()
 	{
 		//print out current students
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(Main.students);
 		//gather needed info
 		System.out.println("Enter the index of the student whose schedule you would like to change.");
 		Scanner userStudentIn = new Scanner(System.in);
@@ -84,7 +84,7 @@ public class GradeOrScheduleChanger
 				//It also needs to be set to the correct index
 				
 		//print out new info
-		InputHelper.printAllStudentsAndInfo();
+		InputHelper.printAllStudentsAndInfo(Main.students);
 //		System.out.println(Main.students.get(studentIndex - 1).getName());
 //		System.out.println(Main.students.get(studentIndex - 1).getGrades());
 //		System.out.println(Main.students.get(studentIndex - 1).getSubjectList());
