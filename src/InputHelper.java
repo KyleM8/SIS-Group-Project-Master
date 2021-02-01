@@ -1,14 +1,51 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 
 public class InputHelper {
+	public static Map<String,Float> gradeScale = new HashMap<String,Float>();
+	
+	public static void setGradeScale() {
+		gradeScale.put("A+", 4f);
+		gradeScale.put("A", 4f);
+		gradeScale.put("A-", 3.7f);
+		gradeScale.put("B+", 3.3f);
+		gradeScale.put("B", 3f);
+		gradeScale.put("B-", 2.7f);
+		gradeScale.put("C+", 2.3f);
+		gradeScale.put("C", 2f);
+		gradeScale.put("C-", 1.7f);
+		gradeScale.put("D+", 1.3f);
+		gradeScale.put("D", 1f);
+		gradeScale.put("D-", 0.7f);
+		gradeScale.put("F", 0f);
+	}
+	
+	public static float calcGPA(String... grades) {
+		float gpa = 0f;
+		for (String g : grades) {
+			gpa += gradeScale.get(g);
+		}
+		gpa = gpa / 3;
+		gpa = gpa * 100;
+		gpa = Math.round(gpa);
+		gpa = gpa/100;
+		
+		return gpa;
+	}
 	
 	public static void printAllStudentsAndInfo() {
 		System.out.println("ALL STUDENTS:\n");
-		String spacing = "   ";
+		String spacing = "    ";
 		int index = 1;
 		for (Student s : Main.students) {
-			System.out.println("\n" + index + ". " + s.getName());
+			if (index < 10) {
+				System.out.println("\n0" + index + ". " + s.getName());
+			}
+			else {
+				System.out.println("\n" + index + ". " + s.getName());
+			}
 			System.out.print(spacing + "Classes and grades: ");
 			int counter = 1;
 			for (String str : s.getSubjectList()) {
@@ -18,6 +55,7 @@ public class InputHelper {
 				}
 				counter++;
 			}
+			System.out.println(spacing + "GPA: " + s.getGPA());
 			System.out.println("");
 			index++;
 		}
