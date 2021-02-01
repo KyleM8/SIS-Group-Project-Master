@@ -9,6 +9,9 @@ public class StudentSorting
 	public static void sortStudents()
 	{
 		
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	}
 }
