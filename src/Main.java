@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 
@@ -29,7 +28,8 @@ public class Main {
 			StudentSorting.sortStudentsMain();
 		}
 		else if (userChoice == 4) {
-			InputHelper.printAllStudentsAndInfo(students);
+		InputHelper.printAllStudentsAndInfo(students);
+		selectOption();
 		}
 		else {
 			selectOption();
