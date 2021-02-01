@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//liz daily pull request comment
 public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 
@@ -30,6 +30,7 @@ public class Main {
 		}
 		else if (userChoice == 4) {
 			InputHelper.printAllStudentsAndInfo();
+			selectOption();
 		}
 		else {
 			selectOption();
