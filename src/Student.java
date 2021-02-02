@@ -66,6 +66,10 @@ public class Student {
 	public String getName() {
 		return name;
 	}
+	public String getLastName() {
+		String[] arr = name.split(" ");
+		return arr[1];
+	}
 	public void setName(String n) {
 		this.name = n;
 	}
