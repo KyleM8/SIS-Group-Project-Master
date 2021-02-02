@@ -8,7 +8,7 @@ public class StudentSorting {
 		String choice = choiceScanner.nextLine();
 		if (InputHelper.isNumber(choice)) {
 			if (Integer.parseInt(choice) == 1) {
-				// go to sort by last name
+				SortLastName.sortByLastName();
 			}
 			else if (Integer.parseInt(choice) == 2) {
 				SortGPA.sortByGPAMenu();
