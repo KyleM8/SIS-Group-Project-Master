@@ -25,15 +25,16 @@ public class SortGPA {
 				sortByGPAMenu();
 			}
 		}
+		Main.selectOption();
 	}
 	
 	public static void sortByGPA() { //sorts by GPA; greatest to smallest
-		for (Student s : Main.students) {
-			studentsGPASorted.add(s);
+		studentsGPASorted = Main.students;
+		for (Student s : studentsGPASorted) {
 			studentsGPASortedReverse.add(s);
 		}
 		while (stillSorting()) {
-			for (int i = 0; i < studentsGPASorted.size(); i++) {
+			for (int i = 0; i < studentsGPASorted.size()-1; i++) {
 				if (studentsGPASorted.get(i).getGPA() < studentsGPASorted.get(i+1).getGPA()) {
 					Student temp = studentsGPASorted.get(i);
 					studentsGPASorted.set(i, studentsGPASorted.get(i+1));
@@ -49,7 +50,7 @@ public class SortGPA {
 	}
 	
 	public static boolean stillSorting() {
-		for (int i = 0; i < studentsGPASorted.size(); i++) {
+		for (int i = 0; i < studentsGPASorted.size()-1; i++) {
 			if (studentsGPASorted.get(i).getGPA() < studentsGPASorted.get(i+1).getGPA()) {
 				return true;
 			}
