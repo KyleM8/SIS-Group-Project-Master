@@ -3,10 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class GradeOrScheduleChanger 
-{
-	public static void changeGradesOrSchedule()
-	{
+public class GradeOrScheduleChanger {
+	public static void changeGradesOrSchedule() {
 		System.out.println("Change Student Grades/Schedule");
 		System.out.println("1. Change Grades \n2. Switch Classes \n3. Return to main menu");
 		Scanner userChoiceIn = new Scanner(System.in);
@@ -20,16 +18,8 @@ public class GradeOrScheduleChanger
 		else
 			changeGradesOrSchedule();	
 	}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	public static void changeGrades()
-	{
-=======
-=======
->>>>>>> Stashed changes
-	
+
 	public static void changeGrades() {
->>>>>>> Stashed changes
 		//gather all info needed in order to set grades
 		InputHelper.printAllStudentsAndInfo(Main.students);
 		System.out.println("Enter the index of the student whose grades you would like to change.");
@@ -54,16 +44,8 @@ public class GradeOrScheduleChanger
 		System.out.println("Grades have been updated.");
 		Main.selectOption();
 	}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	public static void switchClasses()
-	{
-=======
-=======
->>>>>>> Stashed changes
-	
+  
 	public static void switchClasses() {
->>>>>>> Stashed changes
 		//print out current students
 		InputHelper.printAllStudentsAndInfo(Main.students);
 		//gather needed info
@@ -100,9 +82,6 @@ public class GradeOrScheduleChanger
 				
 		//print out new info
 		InputHelper.printAllStudentsAndInfo(Main.students);
-//		System.out.println(Main.students.get(studentIndex - 1).getName());
-//		System.out.println(Main.students.get(studentIndex - 1).getGrades());
-//		System.out.println(Main.students.get(studentIndex - 1).getSubjectList());
 		Main.selectOption();
 	}
 }
