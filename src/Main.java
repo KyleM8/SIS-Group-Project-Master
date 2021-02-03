@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class Main {
 	public static ArrayList<Student> students = new ArrayList<Student>();
 

@@ -18,7 +18,11 @@ public class GradeOrScheduleChanger {
 		else
 			changeGradesOrSchedule();	
 	}
+<<<<<<< Updated upstream
 
+=======
+	
+>>>>>>> Stashed changes
 	public static void changeGrades() {
 		//gather all info needed in order to set grades
 		InputHelper.printAllStudentsAndInfo(Main.students);
@@ -44,7 +48,11 @@ public class GradeOrScheduleChanger {
 		System.out.println("Grades have been updated.");
 		Main.selectOption();
 	}
+<<<<<<< Updated upstream
   
+=======
+	
+>>>>>>> Stashed changes
 	public static void switchClasses() {
 		//print out current students
 		InputHelper.printAllStudentsAndInfo(Main.students);
