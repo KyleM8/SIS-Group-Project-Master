@@ -1,10 +1,13 @@
 import java.util.Comparator;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 public class PeriodTwoComparator implements Comparator<Student>
 {
 	public int compare(Student s1, Student s2) 
 	{
 =======
+=======
+>>>>>>> Stashed changes
 
 public class PeriodTwoComparator implements Comparator<Student> {
 	public int compare(Student s1, Student s2) {

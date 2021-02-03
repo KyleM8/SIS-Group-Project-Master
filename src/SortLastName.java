@@ -18,5 +18,8 @@ public class SortLastName {
 		InputHelper.printAllStudentsAndInfo(studentsLastNameSorted);
 		
 	}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

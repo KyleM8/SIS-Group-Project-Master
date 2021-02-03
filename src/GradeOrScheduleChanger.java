@@ -21,9 +21,12 @@ public class GradeOrScheduleChanger
 			changeGradesOrSchedule();	
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	public static void changeGrades()
 	{
 =======
+=======
+>>>>>>> Stashed changes
 	
 	public static void changeGrades() {
 >>>>>>> Stashed changes
@@ -52,9 +55,12 @@ public class GradeOrScheduleChanger
 		Main.selectOption();
 	}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	public static void switchClasses()
 	{
 =======
+=======
+>>>>>>> Stashed changes
 	
 	public static void switchClasses() {
 >>>>>>> Stashed changes
