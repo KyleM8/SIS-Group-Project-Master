@@ -18,11 +18,15 @@ public class GradeOrScheduleChanger
 		else if(userChoice == 3)
 			Main.selectOption();
 		else
-			changeGradesOrSchedule();
-		
+			changeGradesOrSchedule();	
 	}
+<<<<<<< Updated upstream
 	public static void changeGrades()
 	{
+=======
+	
+	public static void changeGrades() {
+>>>>>>> Stashed changes
 		//gather all info needed in order to set grades
 		InputHelper.printAllStudentsAndInfo(Main.students);
 		System.out.println("Enter the index of the student whose grades you would like to change.");
@@ -47,8 +51,13 @@ public class GradeOrScheduleChanger
 		System.out.println("Grades have been updated.");
 		Main.selectOption();
 	}
+<<<<<<< Updated upstream
 	public static void switchClasses()
 	{
+=======
+	
+	public static void switchClasses() {
+>>>>>>> Stashed changes
 		//print out current students
 		InputHelper.printAllStudentsAndInfo(Main.students);
 		//gather needed info
