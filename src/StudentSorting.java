@@ -16,9 +16,9 @@ public class StudentSorting {
 			else if (Integer.parseInt(choice) == 3) {
 				SortPeriod.sortByPeriod();
 			}
-			else if (Integer.parseInt(choice) == 4) {
-				GroupSorter.SortIntoGroups();
-			}
+//			else if (Integer.parseInt(choice) == 4) {
+//				GroupSorter.SortIntoGroups();
+//			}
 			else {
 				sortStudentsMain();
 			}

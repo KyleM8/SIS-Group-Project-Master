@@ -13,7 +13,8 @@ public class SortPeriod {
 		Scanner periodChoiceIn = new Scanner(System.in);
 		int periodChoice = periodChoiceIn.nextInt();
 		//conditionals to sort proper period
-		//each one calls the proper comparator class and sorts it, then prints out all the info
+		//each one calls the proper comparator class and sorts it
+		//info is printed afterwards for the new list as to not change the main list
 		if(periodChoice == 1){
 			Collections.sort(sortedPeriod, new PeriodOneComparator());
 			InputHelper.printAllStudentsAndInfo(sortedPeriod);	
